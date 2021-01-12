@@ -15,5 +15,14 @@ Notes:
 
 
 def multiply_nums(nums):
-    # Your code here
+    if nums == "":
+        return "input is empty"
+    nums_list = nums.split(", ")
+    result = 1
+    for num in nums_list:
+        result *= int(num)
+    return result
+
+print(multiply_nums("2, 3"))
+print(multiply_nums("1, 2, 3, 4"))
 

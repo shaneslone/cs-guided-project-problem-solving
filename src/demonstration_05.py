@@ -22,5 +22,22 @@ Notes:
 - Return the name of the data type as a lowercase string.
 """
 def data_type(value):
-    # Your code here
+    if type(value) is list:
+        return "List"
+    elif type(value) is dict:
+        return "Dictionary"
+    elif type(value) is str:
+        return "String"
+    elif type(value) is int:
+        return "Integer"
+    elif type(value) is float:
+        return "Float"
+    elif type(value) is bool:
+        return "Boolean"
+    else:
+        return "Date"
+
+print(data_type([1, 2, 3, 4]))
+print(data_type({'key': "value"}))
+print(data_type(datetime.date(2018,1,1)))
 
